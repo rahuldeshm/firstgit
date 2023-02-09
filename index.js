@@ -71,22 +71,22 @@
 // var lastItem = document.querySelector(".list-group-item:last-child");
 // lastItem.style.color = "blue";
 
-var secondItem = document.querySelector(".list-group-item:nth-child(2)");
-secondItem.style.backgroundColor = "green";
-var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
-thirdItem.textContent = "";
+// var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+// secondItem.style.backgroundColor = "green";
+// var thirdItem = document.querySelector(".list-group-item:nth-child(3)");
+// thirdItem.textContent = "";
 
-//QUERYSELECTORALL
-var items = document.querySelectorAll('.list-group-item');
-// console.log(titles);
-items[1].style.color = 'green';
+// //QUERYSELECTORALL
+// var items = document.querySelectorAll('.list-group-item');
+// // console.log(titles);
+// items[1].style.color = 'green';
 
-var odd =document.querySelectorAll('li:nth-child(odd)');
+// var odd =document.querySelectorAll('li:nth-child(odd)');
 
 
-for (var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor = 'green';
-}
+// for (var i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor = 'green';
+// }
 //QUERYSELECTORALL
 // var even =document.querySelectorAll('li:nth-child(even)');
 
@@ -94,4 +94,70 @@ for (var i=0;i<odd.length;i++){
 // for (var i=0;i<even.length;i++){
 //     even[i].style.backgroundColor = '#ccc';
 // }
+// // TRANVERSING THE DOM//
+var itemlist = document.querySelector('#items');
+// // console.log(itemlist.parentNode);
+// // itemlist.parentNode.style.backgroundColor = '#f4f4f4';
+// // console.log(itemlist.parentNode.parentNode)
+// console.log(itemlist.parentElement);
+// itemlist.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemlist.parentElement.parentNode)
 
+//CHILDNODE//
+// console.log(itemlist.childNodes) //USE CHLIDREN
+//CHILDREN//
+// console.log(itemlist.children)
+// console.log(itemlist.children[1])
+// itemlist.children[2].style.backgroundColor = 'yellow';
+
+// //firstchild
+// console.log(itemlist.firstChild);
+// //firstelement child
+// console.log(itemlist.firstElementChild);
+// itemlist.firstElementChild.textContent = 'Hello 1';
+
+//lastChild
+// console.log(itemlist.lastChild);
+// //lastelement child
+// console.log(itemlist.lastElementChild);
+// itemlist.lastElementChild.textContent = 'Hello 1';
+
+// //NEXT SIBILING//
+// console.log(itemlist.nextSibling);
+// //NEXTELEMENTSINLING
+// console.log(itemlist.nextElementSibling);
+// //PREVIOUS SIBILING//
+// console.log(itemlist.previousSibling);
+// //PREVIOUSELEMENTSINLING
+// console.log(itemlist.previousElementSibling);
+// itemlist.previousElementSibling.style.color = 'green';
+
+// CREATE ELEMENT//
+var newDiv = document.createElement('div');
+
+// ADD CLASS//
+newDiv.className = 'hello';
+
+//ADD ID//
+newDiv.id = 'hello1';
+
+// ADD ATTRIBUTES//
+newDiv.setAttribute('title','Hello world');
+
+// ADD TEXT TO DIV //
+// CREATE TEXTNODE//
+
+var newDivText = document.createTextNode("Hello World");
+
+//add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+container.insertBefore(newDiv, h1);
+var contain = document.querySelector('header container');
+var h = document.querySelector('header ul');
+contain.insertBefore(newDiv, h);
+
+
+console.log(newDiv);
