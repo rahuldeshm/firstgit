@@ -26,19 +26,52 @@
 // header.style.borderBottom = 'solid 3px #000';
 
 //GET ELEMENTS BY CLASS NAME
-var items = document.getElementsByClassName('list-group-item');
-// console.log(items);
-// items[1].textContent = 'Hello two';
-// items[1].style.fontWeight = "bold" ;
-// items[1].style.backgroundColor = "yellow" ;
+// var items = document.getElementsByClassName('list-group-item');
+// // console.log(items);
+// // items[1].textContent = 'Hello two';
+// // items[1].style.fontWeight = "bold" ;
+// // items[1].style.backgroundColor = "yellow" ;
 
-// items.style.backgroundColor = "yellow" ;
+// // items.style.backgroundColor = "yellow" ;
 
 
-for (var i =0;i<items.length;i++){
-    items[i].style.backgroundColor='yellow';
+// for (var i =0;i<items.length;i++){
+//     items[i].style.backgroundColor='yellow';
+// }
+// var tit =document.getElementsByClassName('title');
+// console.log(tit)
+// tit[0].style.fontWeight='bold';
+// tit[0].style.color='green';
+
+//GET ELEMENT BY TAG NAME
+var li = document.getElementsByTagName("li");
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = "Hello 3";
+// li[1].style.fontWeight = 'bold';
+// li[1].style.backgroundColor ='yellow';
+
+for (var i=0;i<li.length;i++){
+    li[i].style.backgroundColor = '#f4f4f4';
 }
-var tit =document.getElementsByClassName('title');
-console.log(tit)
-tit[0].style.fontWeight='bold';
-tit[0].style.color='green';
+
+//QUERY SELECTOR
+var header = document.querySelector("#main-header");
+header.style.borderBottom = 'solid 5px #ccc';
+
+var input = document.querySelector('input');
+input.value = 'Hello world';
+
+var submit = document.querySelector('input[type="submit"]');
+submit.value = "addto";
+
+var item = document.querySelector('.list-group-item');
+item.style.color = 'red';
+
+var lastItem = document.querySelector(".list-group-item:last-child");
+lastItem.style.color = "blue";
+
+var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+secondItem.style.color = "coral";
+
+
